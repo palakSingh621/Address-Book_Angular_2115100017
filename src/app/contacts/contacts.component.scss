@@ -47,3 +47,135 @@
   .add-person-btn:hover {
     background-color: #03a9f4;
   }
+  .action-btn {
+    font-size: 18px;
+    padding: 6px 10px;
+    margin-right: 8px;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+  }
+  
+  /* Optional hover effect */
+  .action-btn:hover {
+    opacity: 0.85;
+  }
+  
+  /* Edit button specific style */
+  .edit-btn {
+    background-color:white;
+    color:  #007bff;
+  }
+  
+  /* Delete button specific style */
+  .delete-btn {
+    background-color: white;
+    color:#dc3545;
+  }
+  .contact-list {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 1rem;
+  }
+  
+  .contact-card {
+    background-color: #ffffff;
+    padding: 1rem;
+    border-radius: 10px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+    width: 300px;
+  }
+  
+  .contact-card p {
+    margin: 0.3rem 0;
+  }
+  
+  .contact-card button {
+    margin-right: 0.5rem;
+    margin-top: 0.5rem;
+    padding: 6px 12px;
+    border: none;
+    background-color: #007bff;
+    color: white;
+    border-radius: 6px;
+    cursor: pointer;
+  }
+  
+  .contact-card button:hover {
+    background-color: #0056b3;
+  }
+  
+  /* Modal Overlay */
+  .form-overlay {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100vw;
+    height: 100vh;
+    background-color: rgba(0, 0, 0, 0.6);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    z-index: 1000;
+  }
+  
+  /* Modal Card */
+  .form-card {
+    background-color: #fff;
+    padding: 2rem;
+    width: 420px;
+    border-radius: 16px;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.2);
+  }
+  
+  .form-card h3 {
+    font-size: 1.5rem;
+    margin-bottom: 1.5rem;
+    font-weight: 700;
+  }
+  
+  .form-card input {
+    width: 100%;
+    padding: 12px;
+    margin-bottom: 1rem;
+    border: 1px solid #ccc;
+    border-radius: 10px;
+    font-size: 1rem;
+  }
+  
+  /* Button Row */
+  .button-row {
+    display: flex;
+    justify-content: space-between;
+    gap: 1rem;
+  }
+  
+  .button-row button {
+    padding: 10px 16px;
+    font-size: 1rem;
+    border: none;
+    border-radius: 8px;
+    cursor: pointer;
+    min-width: 100px;
+  }
+  
+  /* Update Button Style */
+  .button-row button[type="submit"] {
+    background-color: #28a745;
+    color: white;
+  }
+  
+  .button-row button[type="submit"]:hover {
+    background-color: #218838;
+  }
+  
+  /* Cancel Button Style */
+  .button-row button[type="button"] {
+    background-color: #dc3545;
+    color: white;
+  }
+  
+  .button-row button[type="button"]:hover {
+    background-color: #c82333;
+  }

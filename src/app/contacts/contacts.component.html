@@ -1,6 +1,6 @@
-<h2>Person Details</h2>
-<div class="header">
-    <button class="add-person-btn" routerLink=NewcontactsComponents>+ Add Person</button>
+<div class="header" style="display: flex; justify-content: space-between; align-items: center;">
+  <h2>Person Details</h2>
+  <button class="add-person-btn" [routerLink]="['/new-contacts']">+ Add Person</button>
 </div>
 
 <div class="person-list-container">
@@ -25,10 +25,29 @@
         <td>{{ person.zipCode }}</td>
         <td>{{ person.phoneNumber }}</td>
         <td>
-          <button (click)="onEdit(person)">✏</button>
-          <button (click)="onDelete(person.id)">🗑</button>
+          <button class="action-btn edit-btn" (click)="onEdit(person)">✏</button>
+          <button class="action-btn delete-btn" (click)="onDelete(person.id)">🗑</button>
         </td>
       </tr>
     </tbody>
   </table>
+  <!-- Form Card Overlay -->
+  <div class="form-overlay" *ngIf="showForm">
+    <div class="form-card">
+      <h3>{{ isEditMode ? 'Edit Contact' : 'Add Contact' }}</h3>
+      <form (ngSubmit)="saveContact()">
+        <input type="text" [(ngModel)]="formData.fullName" name="fullName" placeholder="Full Name" required>
+        <input type="text" [(ngModel)]="formData.address" name="address" placeholder="Address" required>
+        <input type="text" [(ngModel)]="formData.city" name="city" placeholder="City" required>
+        <input type="text" [(ngModel)]="formData.state" name="state" placeholder="State" required>
+        <input type="text" [(ngModel)]="formData.zipCode" name="zipCode" placeholder="Zip Code" required>
+        <input type="text" [(ngModel)]="formData.phoneNumber" name="phoneNumber" placeholder="Phone Number" required>
+
+        <div class="button-row">
+          <button type="submit">{{ isEditMode ? 'Update' : 'Save' }}</button>
+          <button type="button" (click)="cancelForm()">Cancel</button>
+        </div>
+      </form>
+    </div>
+  </div>
 </div>

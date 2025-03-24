@@ -1,1 +1,45 @@
-<p>home works!</p>
+<div class="home-container">
+    <h2>Welcome to Contact Book</h2>
+    
+    <div class="form-sections">
+      <!-- Login Form -->
+      <div class="form-card" *ngIf="showLoginForm">
+        <h3>Login</h3>
+        <form>
+          <label>Email</label>
+          <input type="email" placeholder="Enter Email" />
+          
+          <label>Password</label>
+          <input type="password" placeholder="Enter Password" />
+          
+          <button type="submit">Login</button>
+        </form>
+        <p class="switch-text">
+            Don't have an account?
+            <button class="switch-btn" (click)="toggleForm()">Register</button>
+        </p>
+      </div>
+  
+      <!-- Register Form -->
+      <div class="form-card" *ngIf="!showLoginForm">
+        <h3>Register</h3>
+        <form>
+          <label>Username</label>
+          <input type="text" placeholder="Enter Name" />
+          
+          <label>Email</label>
+          <input type="email" placeholder="Enter Email" />
+          
+          <label>Password</label>
+          <input type="password" placeholder="Enter Password" />
+          
+          <button type="submit">Register</button>
+        </form>
+        <p class="switch-text">
+            Already have an account?
+            <button class="switch-btn" (click)="toggleForm()">Login</button>
+        </p>
+      </div>
+    </div>
+  </div>
+  

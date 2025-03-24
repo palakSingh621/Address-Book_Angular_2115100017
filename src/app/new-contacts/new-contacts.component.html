@@ -1,7 +1,7 @@
 <div class="form-container">
     <div class="form-header">
         <span>PERSON ADDRESS FORM</span>
-        <button class="close-btn" (click)="cancelForm()">✖</button>
+        <button class="close-btn" [routerLink]="['/contacts']">✖</button>
     </div>
 
     <form (ngSubmit)="saveContact()" #personForm="ngForm">

@@ -1,0 +1,63 @@
+.home-container {
+    text-align: center;
+    padding: 20px;
+  }
+  
+  .form-sections {
+    display: flex;
+    justify-content: center;
+    gap: 40px;
+    margin-top: 30px;
+  }
+  
+  .form-card {
+    background: #f9f9f9;
+    padding: 30px;
+    width: 300px;
+    border-radius: 12px;
+    box-shadow: 0 0 10px rgba(0,0,0,0.1);
+  }
+  
+  form label {
+    display: block;
+    text-align: left;
+    margin-bottom: 5px;
+    font-weight: 600;
+  }
+  
+  form input {
+    width: 100%;
+    padding: 8px 10px;
+    margin-bottom: 15px;
+    border-radius: 6px;
+    border: 1px solid #ccc;
+  }
+  
+  form button {
+    background-color: #007bff;
+    color: white;
+    padding: 10px 15px;
+    width: 100%;
+    border: none;
+    border-radius: 6px;
+    cursor: pointer;
+    font-size: 16px;
+  }
+  
+  form button:hover {
+    background-color: #0056b3;
+  }
+  .switch-text {
+    margin-top: 15px;
+  }
+  
+  .switch-btn {
+    background: none;
+    border: none;
+    color: #007bff;
+    font-weight: bold;
+    cursor: pointer;
+    text-decoration: underline;
+    font-size: 15px;
+  }
+  
