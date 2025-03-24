@@ -1,0 +1,34 @@
+<h2>Person Details</h2>
+<div class="header">
+    <button class="add-person-btn" routerLink=NewcontactsComponents>+ Add Person</button>
+</div>
+
+<div class="person-list-container">
+  <table class="person-list-table">
+    <thead>
+      <tr>
+        <th>Full Name</th>
+        <th>Address</th>
+        <th>City</th>
+        <th>State</th>
+        <th>Zip Code</th>
+        <th>Phone Number</th>
+        <th>Actions</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr *ngFor="let person of personList">
+        <td>{{ person.fullName }}</td>
+        <td>{{ person.address }}</td>
+        <td>{{ person.city }}</td>
+        <td>{{ person.state }}</td>
+        <td>{{ person.zipCode }}</td>
+        <td>{{ person.phoneNumber }}</td>
+        <td>
+          <button (click)="onEdit(person)">✏</button>
+          <button (click)="onDelete(person.id)">🗑</button>
+        </td>
+      </tr>
+    </tbody>
+  </table>
+</div>

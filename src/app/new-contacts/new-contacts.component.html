@@ -1,0 +1,49 @@
+<div class="form-container">
+    <div class="form-header">
+        <span>PERSON ADDRESS FORM</span>
+        <button class="close-btn" (click)="cancelForm()">✖</button>
+    </div>
+
+    <form (ngSubmit)="saveContact()" #personForm="ngForm">
+        <label for="fullName">Full Name</label>
+        <input type="text" id="fullName" [(ngModel)]="formData.fullName" name="fullName" required placeholder="Enter Full Name">
+
+        <label for="phoneNumber">Phone Number</label>
+        <input type="text" id="phoneNumber" [(ngModel)]="formData.phoneNumber" name="phoneNumber" required placeholder="Enter Phone Number">
+
+        <label for="address">Address</label>
+        <textarea id="address" [(ngModel)]="formData.address" name="address" rows="3" placeholder="Enter Address"></textarea>
+
+        <div class="city-state-zip">
+            <div>
+                <label for="city">City</label>
+                <select id="city" [(ngModel)]="formData.city" name="city">
+                    <option value="" disabled selected>Select City</option>
+                    <option value="Delhi">Delhi</option>
+                    <option value="Mumbai">Mumbai</option>
+                    <option value="Bangalore">Bangalore</option>
+                </select>
+            </div>
+
+            <div>
+                <label for="state">State</label>
+                <select id="state" [(ngModel)]="formData.state" name="state">
+                    <option value="" disabled selected>Select State</option>
+                    <option value="Uttar Pradesh">Uttar Pradesh</option>
+                    <option value="Maharashtra">Maharashtra</option>
+                    <option value="Karnataka">Karnataka</option>
+                </select>
+            </div>
+
+            <div>
+                <label for="zipCode">Zip Code</label>
+                <input type="text" id="zipCode" [(ngModel)]="formData.zipCode" name="zipCode" placeholder="Enter Zip Code">
+            </div>
+        </div>
+
+        <div class="button-group">
+            <button type="submit" class="add-btn" [disabled]="!personForm.valid">Add</button>
+            <button type="button" class="reset-btn" (click)="onReset()">Reset</button>
+        </div>
+    </form>
+</div>
